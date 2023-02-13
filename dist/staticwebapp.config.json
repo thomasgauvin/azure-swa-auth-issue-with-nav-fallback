@@ -1,0 +1,27 @@
+{
+    "routes": [
+        {
+            "route": "*",
+            "methods": [
+                "POST",
+                "PUT",
+                "DELETE"
+            ],
+            "rewrite": "/api/test"
+        },
+        {
+            "route": "/",
+            "rewrite": "/api/test"
+        },
+        {
+            "route": "/index.html",
+            "rewrite": "/api/test"
+        }
+    ],
+    "navigationFallback": {
+        "rewrite": "/api/test"
+    },
+    "platform": {
+        "apiRuntime": "node:18"
+    }
+}
